@@ -29,17 +29,6 @@ router.post("/", async (req, res) => {
     }
 });
 
-router.get("/:username", async (req, res) => {
-    let username = req.params.username;
-    try {
-        const user = await userMethods.getUserByUserName(username);
-        res.json(user)
-    }
-    catch (e) {
-        res.status(500).json(e)
-    }
-})
-
 router.get("/:id", async (req, res) => {
     let id = req.params.id;
     try {
