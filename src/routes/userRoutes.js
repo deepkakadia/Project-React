@@ -99,6 +99,17 @@ router.post("/water/current", async (req, res) => {
   }
 });
 
+router.get("/:id", async (req, res) => {
+    let id = req.params.id;
+    try {
+        const user = await userMethods.getUserById(id);
+        res.json(user)
+    }
+    catch (e) {
+        res.status(500).json(e)
+    }
+})
+
 router.post("/water/cap", async (req, res) => {
   let waterInfo = req.body;
   console.log("From Routes /water/cap: ", waterInfo);
@@ -156,15 +167,5 @@ router.get("/user/:username", async (req, res) => {
   }
 });
 
-router.get("/:id", async (req, res) => {
-  let id = req.params.id;
-  try {
-    // console.log(id);
-    let user = await userMethods.getUserById(id);
-    res.status(200).json(user);
-  } catch (e) {
-    res.status(404).json({ error: "User not found" });
-  }
-});
 
 module.exports = router;
