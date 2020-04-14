@@ -6,6 +6,14 @@ const food = require("../users");
 async function setWaterCurrent(id, count, timestamp) {
   if (!id || typeof id !== "string" || id === undefined || id === null)
     throw "You must provide an id to search for";
+  if (
+    !timestamp ||
+    typeof timestamp !== "string" ||
+    timestamp === undefined ||
+    timestamp === null
+  ) {
+    throw "You must provide an timestamp to search for";
+  }
   if (typeof count !== "number" || count.length === 0)
     throw "Invalid Entry for count current";
 

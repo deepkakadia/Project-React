@@ -53,6 +53,22 @@ router.post("/water/current", async (req, res) => {
     return;
   }
 
+  if (!waterInfo.timestamp) {
+    res.status(400).json({ error: "You must provide a timestamp" });
+    return;
+  }
+  if (
+    typeof waterInfo.timestamp == "undefined" ||
+    typeof waterInfo.timestamp !== "string" ||
+    waterInfo.timestamp.length <= 0 ||
+    waterInfo.timestamp === undefined ||
+    waterInfo.timestamp === null ||
+    waterInfo.timestamp === ""
+  ) {
+    res.status(400).json({ error: "Invalid Entry for ID" });
+    return;
+  }
+
   // if (!waterInfo.count) {
   //   res.status(400).json({ error: "You must provide a Water Count" });
   //   console.log("3");
