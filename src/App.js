@@ -6,8 +6,9 @@ import FoodMain from "./Components/food/foodMain";
 import HomePage from "./Components/home/homePage";
 import ErrorNotFound from "./Components/error/pageNotFound";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import SignUp from './Components/SignUp';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import SignIn from "./Components/SignIn";
 
 function App() {
   return (
@@ -16,32 +17,36 @@ function App() {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>This is a desperate attempt to code the 554 project</p>
-          
+
         </header>
 
-          <div className='App-body'>
+        <div className='App-body'>
 
 
-            <Link className="App-link" to="/">
-              Home
+          <Link className="App-link" to="/">
+            Home
             </Link>
-            <Link className="App-link" to="/water">
-              Water
+          <Link className="App-link" to="/water">
+            Water
             </Link>
-            <Link className='App-Button' to='/foodMain'>
-                Food Page
+          <Link className='App-Button' to='/foodMain'>
+            Food Page
+            </Link>
+          <Link className='App-Button' to='/signup'>
+            Sign Up
             </Link>
 
 
-            <Switch>
+          <Switch>
+            <Route path='/signup' exact component={SignUp}></Route>
+            <Route path='/signin' exact component={SignIn}></Route>
+            <Route path='/' exact component={HomePage}></Route>
+            <Route path="/water" exact component={Water} />
+            <Route path='/foodMain' exact component={FoodMain} />
+            <Route component={ErrorNotFound}></Route>
 
-              <Route path='/' exact component={HomePage}></Route> 
-              <Route path="/water" exact component={Water} /> 
-              <Route path='/foodMain' exact component={FoodMain} />
-              <Route component={ErrorNotFound}></Route>
-
-            </Switch>
-          </div>
+          </Switch>
+        </div>
 
 
       </div>
