@@ -6,18 +6,21 @@ import FoodMain from "./Components/food/foodMain";
 import HomePage from "./Components/home/homePage";
 import ErrorNotFound from "./Components/error/pageNotFound";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import SignUp from './Components/SignUp';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import SignIn from "./Components/SignIn";
+import { AuthProvider } from './firebase/Auth';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>This is a desperate attempt to code the 554 project</p>
-          
-        </header>
+    <AuthProvider>
+      <Router>
+        <div className="App">
+          <header className="App-header">
+            <img src={logo} className="App-logo" alt="logo" />
+            <p>This is a desperate attempt to code the 554 project</p>
+
+          </header>
 
           <div className='App-body'>
 
@@ -29,14 +32,18 @@ function App() {
               Water
             </Link>
             <Link className='App-Button' to='/foodMain'>
-                Food Page
+              Food Page
+            </Link>
+            <Link className='App-Button' to='/signup'>
+              Sign Up
             </Link>
 
 
             <Switch>
-
-              <Route path='/' exact component={HomePage}></Route> 
-              <Route path="/water" exact component={Water} /> 
+              <Route path='/signup' exact component={SignUp}></Route>
+              <Route path='/signin' exact component={SignIn}></Route>
+              <Route path='/' exact component={HomePage}></Route>
+              <Route path="/water" exact component={Water} />
               <Route path='/foodMain' exact component={FoodMain} />
               <Route component={ErrorNotFound}></Route>
 
@@ -44,8 +51,9 @@ function App() {
           </div>
 
 
-      </div>
-    </Router>
+        </div>
+      </Router>
+    </AuthProvider>
   );
 }
 
