@@ -6,7 +6,6 @@ import FoodMain from "./components/food/foodMain";
 import HomePage from "./components/home/homePage";
 import ErrorNotFound from "./components/error/pageNotFound";
 import "bootstrap/dist/css/bootstrap.min.css";
-<<<<<<< HEAD
 import SignUp from "./components/SignUp";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import SignIn from "./components/SignIn";
@@ -47,48 +46,6 @@ function App() {
         </div>
       </Router>
     </AuthProvider>
-=======
-
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
-
-function App() {
-  return (
-    <Router>
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>This is a desperate attempt to code the 554 project</p>
-          
-        </header>
-
-          <div className='App-body'>
-
-
-            <Link className="App-link" to="/">
-              Home
-            </Link>
-            <Link className="App-link" to="/water">
-              Water
-            </Link>
-            <Link className='App-Button' to='/foodMain'>
-                Food Page
-            </Link>
-
-
-            <Switch>
-
-              <Route path='/' exact component={HomePage}></Route> 
-              <Route path="/water" exact component={Water} /> 
-              <Route path='/foodMain' exact component={FoodMain} />
-              <Route component={ErrorNotFound}></Route>
-
-            </Switch>
-          </div>
-
-
-      </div>
-    </Router>
->>>>>>> parent of ac3d703... Merge pull request #4 from deepkakadia/Deep
   );
 }
 
