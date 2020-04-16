@@ -8,6 +8,7 @@ import "./App.css";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Water from "./components/Water";
 =======
 =======
@@ -171,15 +172,19 @@ function App() {
 import Water from "./components/Water";
 =======
 >>>>>>> parent of 9f86f23... Revert "Merge pull request #5 from deepkakadia/master"
+=======
+import Water from "./components/Water";
+>>>>>>> parent of 2e8df93... Merge pull request #5 from deepkakadia/master
 import "bootstrap/dist/css/bootstrap.min.css";
-import SignUp from './Components/SignUp';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
-import SignIn from "./Components/SignIn";
-import { AuthProvider } from './firebase/Auth';
+
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 function App() {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 2e8df93... Merge pull request #5 from deepkakadia/master
     <Router>
       <div className="App">
         <header className="App-header">
@@ -195,6 +200,7 @@ function App() {
         <Route path="/water" exact component={Water} />
       </div>
     </Router>
+<<<<<<< HEAD
 >>>>>>> parent of 2e8df93... Merge pull request #5 from deepkakadia/master
 =======
     <AuthProvider>
@@ -239,6 +245,8 @@ function App() {
       </Router>
     </AuthProvider>
 >>>>>>> parent of 9f86f23... Revert "Merge pull request #5 from deepkakadia/master"
+=======
+>>>>>>> parent of 2e8df93... Merge pull request #5 from deepkakadia/master
   );
 }
 
