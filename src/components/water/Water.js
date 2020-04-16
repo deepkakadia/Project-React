@@ -9,10 +9,11 @@ const Water = () => {
   const [waterCurrent, setWaterCurrent] = useState(undefined);
   const [waterCapCurrent, setWaterCapCurrent] = useState(undefined);
   const [waterCapNew, setWaterCapNew] = useState(undefined);
+  const [waterOld, setWaterOld] = useState(undefined);
+  const [timestamp, setTimestamp] = useState(undefined);
 
   var d = new Date();
   var date = d.getMonth() + 1 + "/" + d.getDate() + "/" + d.getFullYear();
-  // console.log(date);
 
   useEffect(() => {
     console.log("render");
@@ -23,6 +24,9 @@ const Water = () => {
         );
 
         if (data.water.timestamp !== date) {
+          setTimestamp(data.water.timestamp);
+          setWaterOld(data.water.waterCurrent);
+
           let payload = {
             id: "5e921850cba3c3ff5f6610ca",
             count: 0,
@@ -187,6 +191,16 @@ const Water = () => {
 
             <p>Water Cap for today: {waterCapCurrent}</p>
           </div>
+        )}
+      </div>
+      <div>
+        {timestamp === undefined || timestamp === date ? (
+          <p></p>
+        ) : (
+          <p>
+            Last Goal on {timestamp} was {waterOld} cups out of{" "}
+            {waterCapCurrent}
+          </p>
         )}
       </div>
     </div>
