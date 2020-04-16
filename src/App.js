@@ -12,6 +12,7 @@ import "./App.css";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Water from "./components/Water";
 =======
 =======
@@ -77,10 +78,13 @@ import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import SignIn from "./Components/SignIn";
 import { AuthProvider } from './firebase/Auth';
 =======
+=======
+>>>>>>> parent of a0af4fa... Revert "Merge pull request #6 from deepkakadia/parth"
 import Water from "./components/water/Water";
 import FoodMain from "./components/food/foodMain";
 import HomePage from "./components/home/homePage";
 import ErrorNotFound from "./components/error/pageNotFound";
+<<<<<<< HEAD
 import "bootstrap/dist/css/bootstrap.min.css";
 import SignUp from "./components/SignUp";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
@@ -228,11 +232,13 @@ import Water from "./components/Water";
 >>>>>>> parent of 2e8df93... Merge pull request #5 from deepkakadia/master
 =======
 >>>>>>> parent of 9f86f23... Revert "Merge pull request #5 from deepkakadia/master"
+=======
+>>>>>>> parent of a0af4fa... Revert "Merge pull request #6 from deepkakadia/parth"
 import "bootstrap/dist/css/bootstrap.min.css";
-import SignUp from './Components/SignUp';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
-import SignIn from "./Components/SignIn";
-import { AuthProvider } from './firebase/Auth';
+import SignUp from "./components/SignUp";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import SignIn from "./components/SignIn";
+import { AuthProvider } from "./Firebase/Auth";
 
 function App() {
   return (
@@ -268,42 +274,38 @@ function App() {
             <img src={logo} className="App-logo" alt="logo" />
             <p>This is a desperate attempt to code the 554 project</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of a18bff8... navigation
 =======
 >>>>>>> parent of 9f86f23... Revert "Merge pull request #5 from deepkakadia/master"
 
+=======
+            <div className="App-body">
+              <Link className="App-link" to="/">
+                Home
+              </Link>
+              <Link className="App-link" to="/water">
+                Water
+              </Link>
+              <Link className="App-link" to="/foodMain">
+                Food Page
+              </Link>
+              <Link className="App-link" to="/signup">
+                Sign Up
+              </Link>
+            </div>{" "}
+>>>>>>> parent of a0af4fa... Revert "Merge pull request #6 from deepkakadia/parth"
           </header>
 
-          <div className='App-body'>
-
-
-            <Link className="App-link" to="/">
-              Home
-            </Link>
-            <Link className="App-link" to="/water">
-              Water
-            </Link>
-            <Link className='App-Button' to='/foodMain'>
-              Food Page
-            </Link>
-            <Link className='App-Button' to='/signup'>
-              Sign Up
-            </Link>
-
-
-            <Switch>
-              <Route path='/signup' exact component={SignUp}></Route>
-              <Route path='/signin' exact component={SignIn}></Route>
-              <Route path='/' exact component={HomePage}></Route>
-              <Route path="/water" exact component={Water} />
-              <Route path='/foodMain' exact component={FoodMain} />
-              <Route component={ErrorNotFound}></Route>
-
-            </Switch>
-          </div>
-
-
+          <Switch>
+            <Route path="/signup" exact component={SignUp}></Route>
+            <Route path="/signin" exact component={SignIn}></Route>
+            <Route path="/" exact component={HomePage}></Route>
+            <Route path="/water" exact component={Water} />
+            <Route path="/foodMain" exact component={FoodMain} />
+            <Route component={ErrorNotFound}></Route>
+          </Switch>
         </div>
       </Router>
     </AuthProvider>

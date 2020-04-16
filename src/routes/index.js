@@ -11,6 +11,7 @@ const userRoutes = require("./userRoutes");
 const foodRoutes = require("./foodRoutes");
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of a18bff8... navigation
 =======
 const foodRoutes = require("./foodRoutes");
@@ -34,8 +35,16 @@ const foodRoutes = require("./foodRoutes");
 =======
 const foodRoutes = require("./foodRoutes");
 >>>>>>> parent of 9f86f23... Revert "Merge pull request #5 from deepkakadia/master"
+=======
+const waterRoutes = require("./waterRoutes");
+>>>>>>> parent of a0af4fa... Revert "Merge pull request #6 from deepkakadia/parth"
 
+const constructorMethod = (app) => {
+  app.use("/api", userRoutes);
+  app.use("/api/food", foodRoutes);
+  app.use("/api/water", waterRoutes);
 
+<<<<<<< HEAD
 const constructorMethod = app => {
     app.use("/api", userRoutes);
 <<<<<<< HEAD
@@ -78,6 +87,11 @@ const constructorMethod = app => {
     app.use("*", (req, res) => {
         res.status(404).json({ error: "Not found" });
     });
+=======
+  app.use("*", (req, res) => {
+    res.status(404).json({ error: "Not found" });
+  });
+>>>>>>> parent of a0af4fa... Revert "Merge pull request #6 from deepkakadia/parth"
 };
 
 module.exports = constructorMethod;
