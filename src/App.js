@@ -11,6 +11,7 @@ import "./App.css";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Water from "./components/Water";
 =======
 =======
@@ -21,10 +22,13 @@ import Water from "./components/Water";
 >>>>>>> parent of a18bff8... navigation
 =======
 >>>>>>> parent of a18bff8... navigation
+=======
+>>>>>>> parent of 9f86f23... Revert "Merge pull request #5 from deepkakadia/master"
 import Water from "./Components/Water";
 import FoodMain from "./Components/food/foodMain";
 import HomePage from "./Components/home/homePage";
 import ErrorNotFound from "./Components/error/pageNotFound";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -222,12 +226,17 @@ import Water from "./components/Water";
 =======
 import Water from "./components/Water";
 >>>>>>> parent of 2e8df93... Merge pull request #5 from deepkakadia/master
+=======
+>>>>>>> parent of 9f86f23... Revert "Merge pull request #5 from deepkakadia/master"
 import "bootstrap/dist/css/bootstrap.min.css";
-
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import SignUp from './Components/SignUp';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import SignIn from "./Components/SignIn";
+import { AuthProvider } from './firebase/Auth';
 
 function App() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -250,14 +259,19 @@ function App() {
 <<<<<<< HEAD
 >>>>>>> parent of 2e8df93... Merge pull request #5 from deepkakadia/master
 =======
+=======
+>>>>>>> parent of 9f86f23... Revert "Merge pull request #5 from deepkakadia/master"
     <AuthProvider>
       <Router>
         <div className="App">
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
             <p>This is a desperate attempt to code the 554 project</p>
+<<<<<<< HEAD
 =======
 >>>>>>> parent of a18bff8... navigation
+=======
+>>>>>>> parent of 9f86f23... Revert "Merge pull request #5 from deepkakadia/master"
 
           </header>
 
@@ -293,9 +307,12 @@ function App() {
         </div>
       </Router>
     </AuthProvider>
+<<<<<<< HEAD
 >>>>>>> parent of 9f86f23... Revert "Merge pull request #5 from deepkakadia/master"
 =======
 >>>>>>> parent of 2e8df93... Merge pull request #5 from deepkakadia/master
+=======
+>>>>>>> parent of 9f86f23... Revert "Merge pull request #5 from deepkakadia/master"
   );
 }
 
