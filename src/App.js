@@ -2,6 +2,7 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Water from "./components/Water";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -34,6 +35,17 @@ import SignUp from './Components/SignUp';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import SignIn from "./Components/SignIn";
 import { AuthProvider } from './firebase/Auth';
+=======
+import Water from "./components/water/Water";
+import FoodMain from "./components/food/foodMain";
+import HomePage from "./components/home/homePage";
+import ErrorNotFound from "./components/error/pageNotFound";
+import "bootstrap/dist/css/bootstrap.min.css";
+import SignUp from "./components/SignUp";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import SignIn from "./components/SignIn";
+import { AuthProvider } from "./Firebase/Auth";
+>>>>>>> parent of 93eafa4... commit
 
 function App() {
   return (
@@ -43,6 +55,7 @@ function App() {
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
             <p>This is a desperate attempt to code the 554 project</p>
+<<<<<<< HEAD
 
           </header>
 
@@ -79,6 +92,35 @@ function App() {
       </Router>
     </AuthProvider>
 >>>>>>> parent of a18bff8... navigation
+=======
+            <div className="App-body">
+              <Link className="App-link" to="/">
+                Home
+              </Link>
+              <Link className="App-link" to="/water">
+                Water
+              </Link>
+              <Link className="App-link" to="/foodMain">
+                Food Page
+              </Link>
+              <Link className="App-link" to="/signup">
+                Sign Up
+              </Link>
+            </div>{" "}
+          </header>
+
+          <Switch>
+            <Route path="/signup" exact component={SignUp}></Route>
+            <Route path="/signin" exact component={SignIn}></Route>
+            <Route path="/" exact component={HomePage}></Route>
+            <Route path="/water" exact component={Water} />
+            <Route path="/foodMain" exact component={FoodMain} />
+            <Route component={ErrorNotFound}></Route>
+          </Switch>
+        </div>
+      </Router>
+    </AuthProvider>
+>>>>>>> parent of 93eafa4... commit
   );
 }
 
