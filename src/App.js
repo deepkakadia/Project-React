@@ -4,12 +4,18 @@ import "./App.css";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Water from "./components/Water";
 =======
+=======
+>>>>>>> parent of 9f86f23... Revert "Merge pull request #5 from deepkakadia/master"
 import Water from "./Components/Water";
 import FoodMain from "./Components/food/foodMain";
 import HomePage from "./Components/home/homePage";
 import ErrorNotFound from "./Components/error/pageNotFound";
+<<<<<<< HEAD
+>>>>>>> parent of 9f86f23... Revert "Merge pull request #5 from deepkakadia/master"
+=======
 >>>>>>> parent of 9f86f23... Revert "Merge pull request #5 from deepkakadia/master"
 import "bootstrap/dist/css/bootstrap.min.css";
 import SignUp from './Components/SignUp';
@@ -19,6 +25,7 @@ import { AuthProvider } from './firebase/Auth';
 
 function App() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <Router>
       <div className="App">
@@ -61,6 +68,8 @@ function App() {
   return (
 =======
 >>>>>>> parent of 9f86f23... Revert "Merge pull request #5 from deepkakadia/master"
+=======
+>>>>>>> parent of 9f86f23... Revert "Merge pull request #5 from deepkakadia/master"
     <AuthProvider>
       <Router>
         <div className="App">
@@ -69,6 +78,9 @@ function App() {
             <p>This is a desperate attempt to code the 554 project</p>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 9f86f23... Revert "Merge pull request #5 from deepkakadia/master"
 =======
 >>>>>>> parent of 9f86f23... Revert "Merge pull request #5 from deepkakadia/master"
 
@@ -107,6 +119,7 @@ function App() {
       </Router>
     </AuthProvider>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of a18bff8... navigation
 =======
             <div className="App-body">
@@ -137,6 +150,8 @@ function App() {
       </Router>
     </AuthProvider>
 >>>>>>> parent of 93eafa4... commit
+=======
+>>>>>>> parent of 9f86f23... Revert "Merge pull request #5 from deepkakadia/master"
 =======
 >>>>>>> parent of 9f86f23... Revert "Merge pull request #5 from deepkakadia/master"
   );
