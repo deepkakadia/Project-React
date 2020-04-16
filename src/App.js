@@ -6,6 +6,7 @@ import "./App.css";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Water from "./components/Water";
 =======
 =======
@@ -161,6 +162,30 @@ function App() {
 =======
 >>>>>>> parent of 9f86f23... Revert "Merge pull request #5 from deepkakadia/master"
 =======
+>>>>>>> parent of 2e8df93... Merge pull request #5 from deepkakadia/master
+=======
+import Water from "./components/Water";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+function App() {
+  return (
+    <Router>
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>This is a desperate attempt to code the 554 project</p>
+          <Link className="App-link" to="/water">
+            Water
+          </Link>
+          <Link className="App-link" to="/">
+            Home
+          </Link>
+        </header>
+        <Route path="/water" exact component={Water} />
+      </div>
+    </Router>
 >>>>>>> parent of 2e8df93... Merge pull request #5 from deepkakadia/master
   );
 }
