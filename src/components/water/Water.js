@@ -267,6 +267,16 @@ const Water = () => {
           </p>
         )}
       </div>
+      <div>
+        {timestamp === undefined || timestamp === date ? (
+          <p></p>
+        ) : (
+          <p>
+            Last Goal on {timestamp} was {waterOld} cups out of{" "}
+            {waterCapCurrent}
+          </p>
+        )}
+      </div>
     </div>
   );
 };
