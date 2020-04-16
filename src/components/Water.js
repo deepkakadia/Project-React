@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../../App.css";
+import "../App.css";
 import CounterInput from "react-counter-input";
 import axios from "axios";
 import Button from "react-bootstrap/Button";
@@ -100,84 +100,61 @@ const Water = () => {
             {waterCapNew === waterCapCurrent ? (
               <p>Update Value</p>
             ) : (
-              <div>
-                <p>New Water Cap: {waterCapNew}</p>
+                <div>
+                  <p>New Water Cap: {waterCapNew}</p>
 
-                <Button
-                  variant="primary"
-                  style={{ marginBottom: "15px" }}
-                  onClick={handleClickCap}
-                >
-                  Confirm Quantity
+                  <Button
+                    variant="primary"
+                    style={{ marginBottom: "15px" }}
+                    onClick={handleClickCap}
+                  >
+                    Confirm Quantity
                 </Button>
-              </div>
-            )}
+                </div>
+              )}
 
             <p>Current Water Cap is 0</p>
           </div>
         ) : (
-          <div>
-            <div></div>
             <div>
-              <p>
-                <b>Drinking Water</b>
-              </p>
-            </div>
-            <div className="outer">
-              <CounterInput
-                count={waterCurrent}
-                min={0}
-                max={waterCapCurrent}
-                onCountChange={(count) => {
-                  setWaterNew(count);
-                }}
-              />
-            </div>
-            {waterNew === waterCurrent ? (
-              <p>Update Value</p>
-            ) : (
+              <div></div>
               <div>
-                <p>New Water: {waterNew}</p>
-
-                <Button
-                  variant="primary"
-                  style={{ marginBottom: "15px" }}
-                  onClick={handleClick}
-                >
-                  Confirm Quantity
-                </Button>
-              </div>
-            )}
-
-            <p>Water Had so far: {waterCurrent}</p>
-            <div>
-              {waterCurrent === waterCapCurrent ? (
                 <p>
-                  <i>Congrats! Reached Daily Water Cap</i>
+                  <b>Drinking Water</b>
                 </p>
+              </div>
+              <div className="outer">
+                <CounterInput
+                  count={waterCurrent}
+                  min={0}
+                  max={waterCapCurrent}
+                  onCountChange={(count) => {
+                    setWaterNew(count);
+                  }}
+                />
+              </div>
+              {waterNew === waterCurrent ? (
+                <p>Update Value</p>
               ) : (
-                <p></p>
-              )}
-            </div>
+                  <div>
+                    <p>New Water: {waterNew}</p>
 
-            <p>
-              <b>Water Capacity</b>
-            </p>
-            <div className="outer">
-              <CounterInput
-                count={waterCapCurrent}
-                min={0}
-                // max={10}
-                onCountChange={(count) => {
-                  setWaterCapNew(count);
-                }}
-              />
-            </div>
-            {waterCapNew === waterCapCurrent ? (
-              <p>Update Value</p>
-            ) : (
+                    <Button
+                      variant="primary"
+                      style={{ marginBottom: "15px" }}
+                      onClick={handleClick}
+                    >
+                      Confirm Quantity
+                </Button>
+                  </div>
+                )}
+
+              <p>Water Had so far: {waterCurrent}</p>
               <div>
+<<<<<<< HEAD:src/components/water/Water.js
 <<<<<<< HEAD:src/components/Water.js
+=======
+>>>>>>> parent of a18bff8... navigation:src/components/Water.js
                 {waterCurrent === waterCapCurrent ? (
                   <p>
                     <i>Congrats! Reached Daily Water Cap</i>
@@ -185,6 +162,7 @@ const Water = () => {
                 ) : (
                     <p></p>
                   )}
+<<<<<<< HEAD:src/components/water/Water.js
               </div>
 
 <<<<<<< HEAD
@@ -230,9 +208,11 @@ const Water = () => {
                   Confirm Quantity
 >>>>>>> parent of a0af4fa... Revert "Merge pull request #6 from deepkakadia/parth":src/components/water/Water.js
                 </Button>
+=======
+>>>>>>> parent of a18bff8... navigation:src/components/Water.js
               </div>
-            )}
 
+<<<<<<< HEAD:src/components/water/Water.js
 <<<<<<< HEAD:src/components/Water.js
               <p>Water Cap for today: {waterCapCurrent}</p>
             </div>
@@ -276,6 +256,40 @@ const Water = () => {
             {waterCapCurrent}
           </p>
         )}
+=======
+              <p>
+                <b>Water Capacity</b>
+              </p>
+              <div className="outer">
+                <CounterInput
+                  count={waterCapCurrent}
+                  min={0}
+                  // max={10}
+                  onCountChange={(count) => {
+                    setWaterCapNew(count);
+                  }}
+                />
+              </div>
+              {waterCapNew === waterCapCurrent ? (
+                <p>Update Value</p>
+              ) : (
+                  <div>
+                    <p>New Water Cap: {waterCapNew}</p>
+
+                    <Button
+                      variant="primary"
+                      style={{ marginBottom: "15px" }}
+                      onClick={handleClickCap}
+                    >
+                      Confirm Quantity
+                </Button>
+                  </div>
+                )}
+
+              <p>Water Cap for today: {waterCapCurrent}</p>
+            </div>
+          )}
+>>>>>>> parent of a18bff8... navigation:src/components/Water.js
       </div>
     </div>
   );

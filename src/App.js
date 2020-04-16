@@ -13,6 +13,7 @@ import "./App.css";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Water from "./components/Water";
 =======
 =======
@@ -25,10 +26,13 @@ import Water from "./components/Water";
 >>>>>>> parent of a18bff8... navigation
 =======
 >>>>>>> parent of 9f86f23... Revert "Merge pull request #5 from deepkakadia/master"
+=======
+>>>>>>> parent of a18bff8... navigation
 import Water from "./Components/Water";
 import FoodMain from "./Components/food/foodMain";
 import HomePage from "./Components/home/homePage";
 import ErrorNotFound from "./Components/error/pageNotFound";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -96,11 +100,17 @@ import "bootstrap/dist/css/bootstrap.min.css";
 =======
 import "bootstrap/dist/css/bootstrap.min.css";
 >>>>>>> parent of a18bff8... navigation
+=======
+import "bootstrap/dist/css/bootstrap.min.css";
+>>>>>>> parent of a18bff8... navigation
 import SignUp from './Components/SignUp';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import SignIn from "./Components/SignIn";
 import { AuthProvider } from './firebase/Auth';
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of a18bff8... navigation
+=======
 >>>>>>> parent of a18bff8... navigation
 =======
 >>>>>>> parent of a18bff8... navigation
@@ -117,6 +127,7 @@ function App() {
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
             <p>This is a desperate attempt to code the 554 project</p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -296,16 +307,40 @@ function App() {
               </Link>
             </div>{" "}
 >>>>>>> parent of a0af4fa... Revert "Merge pull request #6 from deepkakadia/parth"
+=======
+
+>>>>>>> parent of a18bff8... navigation
           </header>
 
-          <Switch>
-            <Route path="/signup" exact component={SignUp}></Route>
-            <Route path="/signin" exact component={SignIn}></Route>
-            <Route path="/" exact component={HomePage}></Route>
-            <Route path="/water" exact component={Water} />
-            <Route path="/foodMain" exact component={FoodMain} />
-            <Route component={ErrorNotFound}></Route>
-          </Switch>
+          <div className='App-body'>
+
+
+            <Link className="App-link" to="/">
+              Home
+            </Link>
+            <Link className="App-link" to="/water">
+              Water
+            </Link>
+            <Link className='App-Button' to='/foodMain'>
+              Food Page
+            </Link>
+            <Link className='App-Button' to='/signup'>
+              Sign Up
+            </Link>
+
+
+            <Switch>
+              <Route path='/signup' exact component={SignUp}></Route>
+              <Route path='/signin' exact component={SignIn}></Route>
+              <Route path='/' exact component={HomePage}></Route>
+              <Route path="/water" exact component={Water} />
+              <Route path='/foodMain' exact component={FoodMain} />
+              <Route component={ErrorNotFound}></Route>
+
+            </Switch>
+          </div>
+
+
         </div>
       </Router>
     </AuthProvider>
