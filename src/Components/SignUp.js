@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
 import { Redirect } from "react-router-dom";
-import { doCreateUserWithEmailAndPassword } from "../firebase/FirebaseFunctions";
-import { AuthContext } from "../firebase/Auth";
-import SocialSignIn from './SocialSignin'
+import { doCreateUserWithEmailAndPassword } from "../Firebase/FirebaseFunctions";
+import { AuthContext } from "../Firebase/Auth";
+import SocialSignIn from "./SocialSignin";
 function SignUp() {
   const currentUser = useContext(AuthContext);
   const [pwMatch, setpwMatch] = useState("");
@@ -10,18 +10,22 @@ function SignUp() {
     e.preventDefault();
     const { displayName, email, passwordOne, passwordTwo } = e.target.elements;
     if (passwordOne.value !== passwordTwo.value) {
-      setpwMatch('Password do not match');
+      setpwMatch("Password do not match");
       return false;
     }
 
     try {
-      await doCreateUserWithEmailAndPassword(email.value, passwordOne.value, displayName)
+      await doCreateUserWithEmailAndPassword(
+        email.value,
+        passwordOne.value,
+        displayName
+      );
     } catch (error) {
       alert(error);
     }
-  }
+  };
   if (currentUser) {
-    return <Redirect to='/home' />
+    return <Redirect to="/home" />;
   }
   return (
     <div>
@@ -85,7 +89,6 @@ function SignUp() {
       <br />
       <SocialSignIn />
     </div>
-
   );
 }
 
