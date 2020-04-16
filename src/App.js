@@ -10,6 +10,7 @@ import "./App.css";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Water from "./components/Water";
 =======
 =======
@@ -18,10 +19,13 @@ import Water from "./components/Water";
 >>>>>>> parent of 9f86f23... Revert "Merge pull request #5 from deepkakadia/master"
 =======
 >>>>>>> parent of a18bff8... navigation
+=======
+>>>>>>> parent of a18bff8... navigation
 import Water from "./Components/Water";
 import FoodMain from "./Components/food/foodMain";
 import HomePage from "./Components/home/homePage";
 import ErrorNotFound from "./Components/error/pageNotFound";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -81,10 +85,16 @@ import { AuthProvider } from "./Firebase/Auth";
 >>>>>>> parent of 93eafa4... commit
 =======
 import "bootstrap/dist/css/bootstrap.min.css";
+=======
+import "bootstrap/dist/css/bootstrap.min.css";
+>>>>>>> parent of a18bff8... navigation
 import SignUp from './Components/SignUp';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import SignIn from "./Components/SignIn";
 import { AuthProvider } from './firebase/Auth';
+<<<<<<< HEAD
+>>>>>>> parent of a18bff8... navigation
+=======
 >>>>>>> parent of a18bff8... navigation
 
 function App() {
@@ -99,6 +109,7 @@ function App() {
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
             <p>This is a desperate attempt to code the 554 project</p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -245,6 +256,8 @@ function App() {
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
             <p>This is a desperate attempt to code the 554 project</p>
+=======
+>>>>>>> parent of a18bff8... navigation
 
           </header>
 

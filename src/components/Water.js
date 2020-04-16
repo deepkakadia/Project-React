@@ -157,6 +157,9 @@ const Water = () => {
               </div>
 
 <<<<<<< HEAD:src/components/Water.js
+<<<<<<< HEAD:src/components/Water.js
+=======
+>>>>>>> parent of a18bff8... navigation:src/components/water/Water.js
               <p>
                 <b>Water Capacity</b>
               </p>
@@ -189,6 +192,7 @@ const Water = () => {
               <p>Water Cap for today: {waterCapCurrent}</p>
             </div>
           )}
+<<<<<<< HEAD:src/components/Water.js
 =======
             <p>Water Cap for today: {waterCapCurrent}</p>
           </div>
@@ -197,6 +201,8 @@ const Water = () => {
 >>>>>>> parent of 40c8959... Update Water.js:src/components/water/Water.js
 =======
 >>>>>>> parent of 40c8959... Update Water.js:src/components/water/Water.js
+=======
+>>>>>>> parent of a18bff8... navigation:src/components/water/Water.js
       </div>
     </div>
   );
